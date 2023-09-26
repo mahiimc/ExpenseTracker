@@ -27,10 +27,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Official SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v2.0.1
+      
     - name: Build with Maven
       run: mvn -B package --file ./server/pom.xml
-    
-    - name: Coverage Robot Action
-      uses: coverage-robot/action@v1.0.1
                   
 
