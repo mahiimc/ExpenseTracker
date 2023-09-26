@@ -29,3 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file ./server/pom.xml
+                  
+    - name: Free Code Coverage
+      uses: SamuelCabralCruz/free-code-coverage@v0.0.13
+
+
