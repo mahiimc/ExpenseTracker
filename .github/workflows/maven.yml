@@ -33,13 +33,8 @@ jobs:
     - name: Maven Jar Publish
       uses: eric2788/maven-jar-publish@v3
       with:
-    
         java-version: '17'
-        # the location of pom.xml (to build)
-        locate:  ./server/pom.xml
-        # whether the release is draft
+        locate:  ./server
         draft: true
-        # whether the release is pre-release
-        pre-release: true
                   
 
