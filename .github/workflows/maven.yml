@@ -29,5 +29,17 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file ./server/pom.xml
+
+    - name: Maven Jar Publish
+      uses: eric2788/maven-jar-publish@v3
+      with:
+    
+        java-version: '17'
+        # the location of pom.xml (to build)
+        locate:  ./server/pom.xml
+        # whether the release is draft
+        draft: true
+        # whether the release is pre-release
+        pre-release: true
                   
 
