@@ -1,6 +1,8 @@
 package com.expense.config;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -30,8 +32,8 @@ public enum ApplicationProperties {
 		Logger logger = LoggerFactory.getLogger(ApplicationProperties.class);
 		logger.info("Initializing Application Properties");
 		Properties properties = new Properties();
-		try(var inputStream = new FileInputStream(new ClassPathResource("application.properties").getFile())) {
-			properties.load(inputStream);
+		try(var inputStream = new ClassPathResource("application.properties").getInputStream()) {
+			properties.load(new BufferedReader(new InputStreamReader(inputStream)));
 			this.tokenExpiration = properties.getProperty("token.expiration");
 			this.tokenSecret = properties.getProperty("token.secret");
 		}
