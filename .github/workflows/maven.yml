@@ -29,5 +29,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file ./server/pom.xml
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: expense-1.0.0
+        path: ./server/target/expense-0.0.1-SNAPSHOT.jar
+        retention-days: 5
                   
 
