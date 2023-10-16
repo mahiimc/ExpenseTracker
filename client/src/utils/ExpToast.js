@@ -28,6 +28,8 @@ function ExpToast(toastId, message,severity) {
                 position: toast.POSITION.TOP_CENTER
              });
              break;
+        default:
+            console.log("Not yet implemented.")
     }
 }
 
