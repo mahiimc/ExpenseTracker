@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Stack, TextField, Typography } from '@mui/material'
 import Auth from './Auth';
-import { NavLink } from 'react-router-dom';
+import { Form, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,10 +24,14 @@ function Login() {
       [name]: value,
     }));
   }
+
+    function handleLogin() {
+
+    }
   
     function login() {
       const toastId = toast.loading("Loading...",{position: toast.POSITION.TOP_CENTER})
-        axios.post('/api/v1/auth/login',inputField)
+        axios.post('auth/login',inputField)
         .then(response => {
           ExpToast(toastId,response.data.data.message,"success");
           localStorage.setItem('authToken',response.data.data.token);
@@ -57,6 +61,7 @@ function Login() {
           label='Username or Email'
           size='small'
           name='username'
+          required
           onChange={inputHandler}
           value={inputField.username}
           >
@@ -66,6 +71,7 @@ function Login() {
           label="Password"
           type='password'
           size='small'
+          required
           onChange={inputHandler}
           value={inputField.password}
           >
@@ -75,6 +81,7 @@ function Login() {
           disableRipple
           onClick={login}
           >Login</Button>
+
         <Typography>Create Account Here <NavLink to='/register'>Register</NavLink></Typography>
       </Stack>
       </>

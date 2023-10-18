@@ -25,7 +25,7 @@ function Register() {
     }
 
     function register() {
-        axios.post('/api/v1/auth/register',inputField)
+        axios.post('auth/register',inputField)
         .then((response) => {
           console.log(response);
           toast.success(response.data.message);
