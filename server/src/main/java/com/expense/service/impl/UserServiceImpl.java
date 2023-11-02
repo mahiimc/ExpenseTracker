@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user =  userRepository.findUserByUserNameOrEmail(username, username).orElseThrow(()-> new UserNotExistsException("User not found."));
+		User user =  userRepository.findUserByUserNameOrEmail(username, username).orElseThrow(()-> new UserNotExistsException("Invalid Credentials Provided."));
 		return new SecuredUser(user);
 	}
 
