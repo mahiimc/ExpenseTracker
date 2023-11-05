@@ -1,11 +1,13 @@
-import { Typography } from '@mui/material'
 import React from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 function NotFound() {
+
+  const navigate = useNavigate();
   return (
-    <Typography variant='h4'>
+    <h1>
         404 - Not Found.
-    </Typography>
+    </h1>
   )
 }
 
