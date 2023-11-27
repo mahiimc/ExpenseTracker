@@ -1,0 +1,73 @@
+.expense {
+    display: flex;
+    gap: 1rem;
+}
+
+.new-expense {
+    width: 45%;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 1px 1px 1px 1px #675f5f;
+}
+.expense-list {
+    width: 55%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    margin: 0.2rem;
+    box-shadow: 1px 1px 1px 1px #675f5f;
+}
+.charts {
+    display: flex;
+    margin: 0.2rem;
+}
+.charts-buttons {
+    /* border: 1px solid black; */
+    width: 20%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.charts-area {
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 318px;
+    box-shadow: 1px 1px 1px 1px #675f5f;
+}
+.new-expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.category {
+    display: flex;
+    gap: 1rem;
+}
+
+.category-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-link-list-item {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}

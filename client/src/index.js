@@ -5,14 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import Routes from './router/Routes';
+import { Provider } from 'react-redux';
+import store from './redux/Store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={Routes}>
-      <App />
-    </RouterProvider>
-  </React.StrictMode>
+    <Provider store={store}>
+      <RouterProvider router={Routes}>
+        <App />
+      </RouterProvider>
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

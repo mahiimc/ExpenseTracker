@@ -63,4 +63,11 @@ public class UserServiceImpl implements UserService {
 		return new SecuredUser(user);
 	}
 
+	@Transactional
+	@Override
+	public UserDTO findUserByUserName(String userName) {
+		User user =  userRepository.findUserByUserName(userName);
+		return dtoMapper.map(user);
+	}
+
 }

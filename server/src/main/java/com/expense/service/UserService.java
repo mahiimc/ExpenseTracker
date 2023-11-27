@@ -11,4 +11,5 @@ public interface UserService extends UserDetailsService {
 	
 	Long saveUser(User user) throws UserAlreadyExistsException;
 	UserDTO findUserById(Long userId) throws UserNotExistsException;
+	UserDTO findUserByUserName(String userName);
 }

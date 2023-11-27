@@ -1,4 +1,6 @@
+import { message } from "antd";
 import axios from "axios";
+
 
 const ExpAxios = axios.create({
     timeout: 50000,
@@ -7,17 +9,22 @@ const ExpAxios = axios.create({
     }
 });
 
-const setAuthorizationToken = () => {
+ExpAxios.interceptors.request.use(function(config) {
     const token = localStorage.getItem("authToken");
-    if(token) {
-        ExpAxios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    }
-    else {
-        delete ExpAxios.defaults.headers.common['Authorization'];
-    }
-};
+    config.headers["Authorization"] = `Bearer ${token}`;
+    return config; 
+});
 
-setAuthorizationToken();
-
+ExpAxios.interceptors.response.use(
+    (response) => {
+        return response;
+    },
+    (error) => {
+      if (error.response && error.response.status === 401) {
+        message.error('Token expired')
+      }
+      return Promise.reject(error);
+    }
+);
 
 export default ExpAxios

@@ -1,0 +1,73 @@
+.login-layout {
+    /* border: 1px solid black; */
+    height: 100vh;
+}
+.title {
+    font-size: 3rem;
+    display: inline-block;
+    opacity: 0.5;
+    color: rgb(7, 8, 8);
+
+}
+.login-content {
+    display: flex;
+    /* border: 1px solid black; */
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+}
+.login-content-left {
+    /* background-color: #000000; */
+    background-image: url('../assets/landing.jpeg');
+    object-fit: cover;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+.login-content-right {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.login-content-right-form {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid black; */
+    gap: 0.5rem;
+    padding: 2rem;
+}
+.form-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+.oauth-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.oauth-link {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.google {
+    color: red;
+}
+.fb {
+    color: rgb(16, 16, 90);
+}

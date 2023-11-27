@@ -1,0 +1,16 @@
+.app-layout {
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+    height: 90vh;
+    width: 95vw;
+ }
+ .app-layout-side-nav {
+    /* border: 1px solid black; */
+    padding: 0.2rem;
+    width: 15%;
+ }
+ .app-layout-outlet {
+    /* border: 1px solid black; */
+    width: 85%;
+ }

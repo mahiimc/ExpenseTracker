@@ -3,8 +3,11 @@ package com.expense.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
+
+import com.expense.dto.CategoryDTO;
 import com.expense.dto.ExpenseDTO;
 import com.expense.dto.UserDTO;
+import com.expense.model.Category;
 import com.expense.model.Expense;
 import com.expense.model.User;
 
@@ -35,4 +38,10 @@ public interface DtoMapper {
 	Expense map(ExpenseDTO dto);
 	@Mapping(source = "user.userId",target="userId")
 	ExpenseDTO map(Expense model);
+	
+	// Category Mappers
+	
+	Category map(CategoryDTO dto);
+	@Mapping(source="user.userId",target = "userId")
+	CategoryDTO map(Category model);
 }

@@ -1,0 +1,30 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    box-shadow: 1px 1px 1px 1px #675f5f;
+}
+.exp-head-link-list   {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+    gap: 0.5rem;
+}
+ .exp-head-link-list-item {
+    list-style-type: none;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+   
+}
+
+.exp-head-link-list-item a {
+    text-decoration: none;
+    color: black;
+}

@@ -17,7 +17,7 @@ const RegisterSchema = Yup.object().shape({
       .max(60, 'Lastname must be between 3 and 60 characters length')
       .required('Lastname is required'),
 
-    email: Yup.string().email('Invalid email').required('Required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
     
     password: Yup.string()
     .min(6,"Password must be between 6 and 16 characters length")
